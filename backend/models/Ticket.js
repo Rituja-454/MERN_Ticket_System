@@ -12,7 +12,7 @@ const ticketSchema = new Schema({
   },
   category:{
     type:String,
-    enum:["software","hardware","network","finance","HR","General"],
+    enum:["software","hardware","network","finance","hr","general"],
     required:true
   },
   status:{
@@ -21,7 +21,7 @@ const ticketSchema = new Schema({
     default: "Pending"
   },
   createdBy:{
-    type:mongoose.Schema.Types.ObjectId,
+    type: mongoose.Schema.Types.ObjectId,
     ref:"User",
     required:true
   },
