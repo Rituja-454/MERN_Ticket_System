@@ -21,7 +21,7 @@ const registerUser = async(req , res)=>{
 
         // 2. Validate input
       if (!name || !email || !password) {
-      return res.status(400).json({ message: "All fields are required" });
+      return res.status(400).json({ message: "All fields are mandatory required" });
     }
 
         // Check if user already exists
@@ -65,6 +65,7 @@ const loginUser = async(req , res)=>{
 
         // 2. Validate input
         if (!email || !password) {
+          console.log("Email or password missing");
           return res.status(400).json({ message: "All fields must be required" });
         }
 
