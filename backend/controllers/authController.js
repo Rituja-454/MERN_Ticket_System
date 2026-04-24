@@ -65,6 +65,7 @@ const loginUser = async(req , res)=>{
 
         // 2. Validate input
         if (!email || !password) {
+          console.log("Email or password missing");
           return res.status(400).json({ message: "All fields are required" });
         }
 
